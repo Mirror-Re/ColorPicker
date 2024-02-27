@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Color Picker</title>
+    <title>Avatar Maker</title>
     <link href="style.css" type="text/css" rel="stylesheet">
     <style>
+        img.avatar{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
         .red{
             background-color:red;
         }
@@ -24,8 +30,8 @@
             background-color: #eb927a;
         }
         .pink{
-            color:pink;
-        }
+             color:pink;
+         }
         .teal{
             color:teal;
         }
@@ -46,9 +52,8 @@
 <body>
 <div class="container">
     <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <img class="avatar" src="default.png">
+        <img class="avatar" src="batman.png" hidden>
         <div class="row">
             <h3>Background</h3>
             <button id="1">RED</button>
@@ -73,6 +78,7 @@
 
 <script>
     const content = document.querySelector('.content');
+    const avatar = document.getElementById('avatar');
     const red = document.getElementById('1');
     const green = document.getElementById('2');
     const blue = document.getElementById('3');
@@ -89,6 +95,9 @@
 
     const clearButton = document.getElementById('clear');
 
+    if (
+        avatar.hidden = true
+    )
 
     red.addEventListener('click', function(e){
         removeBGColor();
